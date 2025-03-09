@@ -71,11 +71,9 @@ app/
 Immediately following the file name, add your inline content within 3 backticks ` ```inline content here``` `:
 
 Example:
+`
 
 ```
-
-```
-
 import React from 'react';
 
 interface ButtonProps {
@@ -93,10 +91,9 @@ return (
 </button>
 );
 }
-
 ```
 
-```
+`
 
 Everything between the inner triple tildes is used as the file content when the extension creates `button.tsx`.
 
