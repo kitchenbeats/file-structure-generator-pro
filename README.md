@@ -1,5 +1,3 @@
-"""
-
 # File Structure Generator Pro
 
 Generate file and directory structures from text descriptions in VS Code. This extension allows you to quickly scaffold project structures by parsing ASCII tree diagrams and turning them into actual files and directories.
@@ -30,7 +28,7 @@ Generate file and directory structures from text descriptions in VS Code. This e
 
    For example, to create a simple structure with only an `app/` folder and its subfolders:
 
-   ```
+   ```txt
    app/
    ├── api/
    │   ├── users/
@@ -64,7 +62,7 @@ You can define the content for a file directly in your structure file using inli
 
 For example, to create a file with custom React component content:
 
-```
+```txt
 app/
 └── components/
     └── button.tsx
@@ -73,9 +71,6 @@ app/
 Immediately following the file name, add your inline content:
 
 ```
-
-```
-
 import React from 'react';
 
 interface ButtonProps {
@@ -85,17 +80,14 @@ onClick?: () => void;
 
 export default function Button({ text, onClick }: ButtonProps) {
 return (
-<button 
-      className="px-4 py-2 bg-blue-500 text-white rounded" 
+<button
+      className="px-4 py-2 bg-blue-500 text-white rounded"
       onClick={onClick}
     >
 {text}
 </button>
 );
 }
-
-```
-
 ```
 
 Everything between the inner triple tildes is used as the file content when the extension creates `button.tsx`.
@@ -298,4 +290,3 @@ MIT
 ---
 
 Enjoy generating your project structures quickly in VS Code!
-"""
