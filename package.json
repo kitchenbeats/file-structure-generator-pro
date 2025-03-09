@@ -2,7 +2,7 @@
 	"name": "file-structure-generator",
 	"displayName": "File Structure Generator Pro",
 	"description": "Generate file structures from formatted text descriptions with smart templates and content",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"publisher": "JHanlon",
 	"engines": {
 		"vscode": "^1.98.0"
@@ -117,12 +117,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chemular/file-structure-generator.git"
+		"url": "https://github.com/kitchenbeats/file-structure-generator-pro"
 	},
 	"bugs": {
-		"url": "https://github.com/chemular/file-structure-generator/issues"
+		"url": "https://github.com/kitchenbeats/file-structure-generator-pro/issues"
 	},
-	"homepage": "https://github.com/chemular/file-structure-generator/blob/main/README.md",
+	"homepage": "https://github.com/kitchenbeats/file-structure-generator-pro/blob/main/README.md",
 	"author": "j.hanlon",
 	"license": "ISC"
 }
