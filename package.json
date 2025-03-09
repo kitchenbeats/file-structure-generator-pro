@@ -1,0 +1,128 @@
+{
+	"name": "file-structure-generator",
+	"displayName": "File Structure Generator Pro",
+	"description": "Generate file structures from formatted text descriptions with smart templates and content",
+	"version": "1.2.1",
+	"publisher": "JHanlon",
+	"engines": {
+		"vscode": "^1.98.0"
+	},
+	"categories": [
+		"Other",
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"file structure",
+		"directory",
+		"generator",
+		"scaffolding",
+		"project setup"
+	],
+	"icon": "images/icon.png",
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onCommand:extension.generateFileStructure",
+		"onCommand:extension.configureFileGenerator",
+		"onCommand:extension.createNextJsProject",
+		"onCommand:extension.importTemplates"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.generateFileStructure",
+				"title": "Generate File Structure from Text"
+			},
+			{
+				"command": "extension.configureFileGenerator",
+				"title": "Configure File Structure Generator"
+			},
+			{
+				"command": "extension.createNextJsProject",
+				"title": "Create Next.js Project Structure"
+			},
+			{
+				"command": "extension.importTemplates",
+				"title": "Import File Templates"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.generateFileStructure",
+					"when": "editorTextFocus",
+					"group": "1_modification"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "extension.generateFileStructure",
+					"when": "editorIsOpen"
+				},
+				{
+					"command": "extension.configureFileGenerator"
+				}
+			]
+		},
+		"configuration": {
+			"title": "File Structure Generator",
+			"properties": {
+				"fileStructureGenerator.createEmptyFiles": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to create empty files when no template is available"
+				},
+				"fileStructureGenerator.createIntermediateDirectories": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to create intermediate directories automatically"
+				},
+				"fileStructureGenerator.overwriteExisting": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to overwrite existing files"
+				},
+				"fileStructureGenerator.parseComments": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to ignore comments in the structure file"
+				},
+				"fileStructureGenerator.ignoreBlankLines": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to ignore blank lines in the structure file"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.98.0",
+		"@vscode/test-electron": "^1.6.2",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.1",
+		"typescript": "^4.9.5",
+		"vsce": "^1.100.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chemular/file-structure-generator.git"
+	},
+	"bugs": {
+		"url": "https://github.com/chemular/file-structure-generator/issues"
+	},
+	"homepage": "https://github.com/chemular/file-structure-generator/blob/main/README.md",
+	"author": "j.hanlon",
+	"license": "ISC"
+}

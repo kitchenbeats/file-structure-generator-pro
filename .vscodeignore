@@ -1,0 +1,16 @@
+# Exclude files and directories that are not needed in the published extension
+
+# VS Code configuration
+.vscode/**
+.git/**
+
+# Source files (only include compiled output in "out/" if you use TypeScript)
+**/*.ts
+**/*.tsx
+**/*.js.map
+
+# Exclude test files and directories
+src/**
+test/**
+tests/**
+coverage/**

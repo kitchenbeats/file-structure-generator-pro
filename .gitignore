@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Compiled output
+out/
+
+# Packaged extension files
+*.vsix
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# VS Code specific files
+.vscode/
+
+# Temporary directories
+tmp/
+temp/
+
+# Coverage directory
+coverage/
