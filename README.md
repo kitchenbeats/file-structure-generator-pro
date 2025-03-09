@@ -116,6 +116,70 @@ The Next.js templates include specific file types such as:
 - **actions.ts** – A server action template for form submission and login handling.
 - **Config Files**: Templates for `next.config.js` and `tailwind.config.js`.
 
+### Complete NextJS project structure example
+
+```
+.
+├── next.config.js
+├── tailwind.config.js
+├── package.json
+├── postcss.config.js
+├── .env.local
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   ├── error.tsx
+│   ├── loading.tsx
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── route.ts
+│   │   ├── users/
+│   │   │   └── route.ts
+│   │   └── products/
+│   │       └── route.ts
+│   ├── auth/
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   ├── register/
+│   │   │   └── page.tsx
+│   │   └── forgot-password/
+│   │       └── page.tsx
+│   ├── dashboard/
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   └── loading.tsx
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── form.tsx
+│   │   │   └── dropdown.tsx
+│   │   ├── layout/
+│   │   │   ├── header.tsx
+│   │   │   ├── sidebar.tsx
+│   │   │   └── footer.tsx
+│   │   ├── auth/
+│   │   │   ├── login-form.tsx
+│   │   │   └── register-form.tsx
+│   │   └── dashboard/
+│   │       └── stats-card.tsx
+│   ├── lib/
+│   │   ├── utils.ts
+│   │   ├── api.ts
+│   │   ├── db.ts
+│   │   └── auth.ts
+│   ├── middleware.ts
+│   ├── providers.tsx
+│   └── styles/
+│       └── globals.css
+└── public/
+    ├── images/
+    │   └── logo.svg
+    └── favicon.ico
+```
+
 ### Writing Root-Level Files
 
 If you need files to be created in the project root (e.g., `next.config.js`, `package.json`), you have two options:
