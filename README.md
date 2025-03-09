@@ -68,7 +68,7 @@ app/
     └── button.tsx
 ```
 
-Immediately following the file name, add your inline content within 3 backticks ` ```inline content here``` `:
+Immediately following the file name, add your inline content within triple tildes ` ```inline content here``` `:
 
 Example:
 
